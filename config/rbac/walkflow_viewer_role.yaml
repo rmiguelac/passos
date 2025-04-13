@@ -1,0 +1,27 @@
+# permissions for end users to view walkflows.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: walkflow-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: passos
+    app.kubernetes.io/part-of: passos
+    app.kubernetes.io/managed-by: kustomize
+  name: walkflow-viewer-role
+rules:
+- apiGroups:
+  - passos.rmiguelac.com
+  resources:
+  - walkflows
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - passos.rmiguelac.com
+  resources:
+  - walkflows/status
+  verbs:
+  - get

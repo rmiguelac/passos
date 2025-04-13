@@ -1,0 +1,12 @@
+apiVersion: passos.rmiguelac.com/v1alpha1
+kind: Walkflow
+metadata:
+  labels:
+    app.kubernetes.io/name: walkflow
+    app.kubernetes.io/instance: walkflow-sample
+    app.kubernetes.io/part-of: passos
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: passos
+  name: walkflow-sample
+spec:
+  # TODO(user): Add fields here
